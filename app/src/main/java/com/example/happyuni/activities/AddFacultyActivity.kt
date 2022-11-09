@@ -18,12 +18,14 @@ class AddFacultyActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_faculty)
 
+
+
         val db = Room.databaseBuilder(
             applicationContext,
             AppDatabase::class.java, "appDb"
         ).build()
 
-        val facultyAdd : Button = findViewById(R.id.facultyAdd)
+        val facultyAdd = findViewById<Button>(R.id.facultyAdd)
         facultyAdd.setOnClickListener {
             runBlocking {
                 launch (Dispatchers.Default) {
