@@ -8,5 +8,5 @@ import com.example.happyuni.entities.Faculty
 @Dao
 interface FacultyDao {
     @Insert(onConflict = OnConflictStrategy.ABORT)
-    fun insertFaculties(vararg faculties: Faculty)
+    suspend fun insertFaculties(vararg faculties: Faculty)
 }
