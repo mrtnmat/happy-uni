@@ -18,22 +18,19 @@ class AddFacultyActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_faculty)
 
+        val db = Room.databaseBuilder(
+            applicationContext,
+            AppDatabase::class.java, "appDb"
+        ).build()
+
         val facultyAdd : Button = findViewById(R.id.facultyAdd)
         facultyAdd.setOnClickListener {
             runBlocking {
                 launch (Dispatchers.Default) {
-                    val db = Room.databaseBuilder(
-                        applicationContext,
-                        AppDatabase::class.java, "appDb"
-                    ).build()
                     val facultyDao = db.facultyDao()
                     facultyDao.insertFaculties(Faculty(1, "Scienze", "Piazza Grande"))
                 }
             }
         }
-    }
-
-    fun test() = runBlocking {
-
     }
 }
