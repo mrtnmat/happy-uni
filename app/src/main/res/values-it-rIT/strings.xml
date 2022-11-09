@@ -2,4 +2,5 @@
 <resources>
     <string name="app_name">HappyUni</string>
     <string name="add_faculty">Aggiungi Facoltà</string>
+    <string name="facultyAddText">Aggiungi Facoltà</string>
 </resources>
