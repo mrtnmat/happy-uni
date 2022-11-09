@@ -7,6 +7,6 @@ import androidx.room.PrimaryKey
 data class Faculty(
     @PrimaryKey val codice: Int,
 
-    val nome: String?,
-    val sede: String?
+    val nome: String,
+    val sede: String
 )
