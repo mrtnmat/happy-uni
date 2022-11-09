@@ -1,7 +1,8 @@
-package com.example.happyuni
+package com.example.happyuni.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.happyuni.R
 
 class AddFacultyActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
